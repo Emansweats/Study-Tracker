@@ -1,0 +1,50 @@
+{
+  "updated": "2026-09-02T00:00:00Z",
+  "subjects": {
+    "maths": {
+      "name": "Advanced Higher Maths",
+      "accent": "blue",
+      "studyMinutes": 0,
+      "topics": [
+        { "name": "Differentiation", "score": 50 },
+        { "name": "Integration", "score": 50 },
+        { "name": "Complex numbers", "score": 50 },
+        { "name": "Sequences & series", "score": 50 },
+        { "name": "Vectors", "score": 50 },
+        { "name": "Matrices", "score": 50 },
+        { "name": "Diff. equations", "score": 50 }
+      ],
+      "history": [],
+      "pastPapers": []
+    },
+    "physics": {
+      "name": "Advanced Higher Physics",
+      "accent": "coral",
+      "studyMinutes": 0,
+      "topics": [
+        { "name": "Rotational motion", "score": 50 },
+        { "name": "Gravitation", "score": 50 },
+        { "name": "SHM", "score": 50 },
+        { "name": "Wave-particle duality", "score": 50 },
+        { "name": "Electromagnetism", "score": 50 },
+        { "name": "Quanta", "score": 50 }
+      ],
+      "history": [],
+      "pastPapers": []
+    },
+    "chemistry": {
+      "name": "Advanced Higher Chemistry",
+      "accent": "green",
+      "studyMinutes": 0,
+      "topics": [
+        { "name": "Inorganic", "score": 50 },
+        { "name": "Physical", "score": 50 },
+        { "name": "Organic", "score": 50 },
+        { "name": "EM radiation", "score": 50 },
+        { "name": "Researching skills", "score": 50 }
+      ],
+      "history": [],
+      "pastPapers": []
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report card — Advanced Higher progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="top">
+    <h1>Report card</h1>
+    <p class="sub">Your Advanced Higher subjects, graded by topic. Move a slider after a test or past paper and the rating updates — clear bronze, silver, and gold once a subject is genuinely strong across the board.</p>
+
+    <div class="sync-bar">
+      <button id="export-btn">Export data.json</button>
+      <button onclick="document.getElementById('import-input').click()">Import data.json</button>
+      <input type="file" id="import-input" accept="application/json" style="display:none" />
+      <button id="reset-cache-btn">Clear local changes</button>
+      <button id="gh-toggle">Push to GitHub…</button>
+      <span class="status" id="status">Loaded from data.json</span>
+    </div>
+
+    <div class="gh-panel" id="gh-panel">
+      <p class="gh-note">Commits your current progress straight to <code>data.json</code> in the repo, so the other computer just needs to <code>git pull</code> or reload the live site. Use a fine-grained personal access token scoped only to this one repo's contents — it's stored in this browser's local storage, nowhere else.</p>
+      <div class="gh-grid">
+        <input type="text" id="gh-owner" placeholder="GitHub username" />
+        <input type="text" id="gh-repo" placeholder="Repo name" />
+        <input type="text" id="gh-branch" placeholder="Branch (main)" />
+        <input type="text" id="gh-path" placeholder="Path (data/data.json)" />
+        <input type="password" id="gh-token" placeholder="Personal access token" class="gh-token" />
+        <button id="gh-push-btn" class="primary-blue">Push now</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="cards"></main>
+
+  <footer>
+    Changes save to this browser automatically. To sync between two computers, click <strong>Export data.json</strong>, replace <code>data/data.json</code> in the repo with the downloaded file, then commit and push. On the other computer, pull the latest changes and click <strong>Import data.json</strong> (or just clear local changes to reload from the file).
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
