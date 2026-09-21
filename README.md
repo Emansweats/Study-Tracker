@@ -62,6 +62,16 @@ Every time you move a slider, today's overall score for that subject is snapshot
 
 Each subject has its own past paper log. Add a paper's name, date, marks, and total to get a running list, an average percentage, and a trend chart of performance over time. Entries are stored in `pastPapers` in `data.json`, so they sync the same way as everything else — export/import or the GitHub push below.
 
+## Checking your maths answers
+
+`notebooks/math_verification.ipynb` is a SymPy-based Jupyter notebook for double-checking
+Advanced Higher Maths work — differentiation, integration, equations, sequences & series,
+complex numbers, and vectors. Paste in the expression you're working from and the answer you
+worked out by hand, run the cell, and it re-derives the result symbolically and reports a clear
+PASS/FAIL instead of you having to trust your own working. Open it locally with
+`jupyter notebook notebooks/math_verification.ipynb` (requires `sympy` and `jupyter`, e.g.
+`pip install sympy jupyter`).
+
 ## Optional: push straight to GitHub
 
 Instead of manually exporting and replacing `data/data.json`, click **Push to GitHub…** in the top bar and fill in:
